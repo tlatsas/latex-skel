@@ -1,0 +1,102 @@
+\documentclass[12pt,journal,a4paper,onecolumn]{IEEEtran}
+\usepackage{pslatex}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage[belowskip=0pt,aboveskip=5pt]{caption}
+\usepackage{subcaption}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{breakurl}
+
+\begin{document}
+\title{title-here}
+\author{name~lastname}
+\maketitle
+
+%
+\section{Introduction}
+intro here
+
+%
+\section{foo}
+\label{sec:foo}
+Foo with Figure~\ref{fig:foo}.
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics[scale=0.4]{img/foo.eps}
+    \caption{foo}
+    \label{fig:foo}
+\end{figure}
+
+% end section
+
+%
+\section{bar}
+\subsection{baz}
+\label{sub:baz}
+
+Baz with list:
+
+\begin{itemize}
+    \item 1
+    \item 2
+    \item 3
+    \item 4
+\end{itemize}
+
+And with table:
+
+\begin{table}[h]
+    \normalsize
+    \centering
+    \begin{tabular}{|c|c|c|}
+    \hline
+        1 & 2 & 3\\
+    \hline
+        1 & 2 & 3\\
+    \hline
+        1 & 2 & 3\\
+    \hline
+        1 & 2 & 3\\
+    \hline
+    \end{tabular}
+    \caption{}
+    \label{tab:}
+\end{table}
+% subsection  (end)
+
+\subsection{}
+\label{sub:}
+
+Sub sub
+
+\begin{equation}\label{eq:res_bitrate}
+    math goes here
+\end{equation}
+
+% subfigures
+\begin{figure}
+    \centering
+	\begin{subfigure}[htb]{0.42\textwidth}
+        \includegraphics[width=\textwidth]{img/sub1.eps}
+        \caption{}
+        \label{fig:}
+    \end{subfigure}
+    ~
+    \begin{subfigure}[htb]{0.42\textwidth}
+        \includegraphics[width=\textwidth]{img/sub2.eps}
+        \caption{}
+        \label{fig:}
+    \end{subfigure}
+    \caption{caption for both}
+    \label{fig:label_for_both}
+\end{figure}
+
+\section{Conclusion}
+conclusion here
+
+\bibliographystyle{IEEEtran}
+\bibliography{bibfile-here}
+
+\end{document}
